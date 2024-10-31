@@ -1,4 +1,4 @@
-package com.demo.cleanarquitecture.database.repository;
+package com.demo.cleanarquitecture.database.persistence;
 
 import com.demo.cleanarquitecture.database.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

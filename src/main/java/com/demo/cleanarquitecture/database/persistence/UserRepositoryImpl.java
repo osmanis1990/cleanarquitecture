@@ -1,7 +1,7 @@
-package com.demo.cleanarquitecture.database.repository;
+package com.demo.cleanarquitecture.database.persistence;
 
-import com.demo.cleanarquitecture.core.model.User;
-import com.demo.cleanarquitecture.core.repository.UserRepository;
+import com.demo.cleanarquitecture.core.domain.User;
+import com.demo.cleanarquitecture.core.persistence.UserRepository;
 import com.demo.cleanarquitecture.database.mapper.UserMapper;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceException;

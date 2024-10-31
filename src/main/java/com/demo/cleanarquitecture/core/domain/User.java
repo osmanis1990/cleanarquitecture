@@ -1,4 +1,4 @@
-package com.demo.cleanarquitecture.core.model;
+package com.demo.cleanarquitecture.core.domain;
 
 import lombok.Builder;
 import lombok.Value;

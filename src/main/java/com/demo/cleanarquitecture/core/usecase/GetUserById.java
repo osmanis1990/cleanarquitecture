@@ -1,7 +1,7 @@
 package com.demo.cleanarquitecture.core.usecase;
 
-import com.demo.cleanarquitecture.core.model.User;
-import com.demo.cleanarquitecture.core.repository.UserRepository;
+import com.demo.cleanarquitecture.core.domain.User;
+import com.demo.cleanarquitecture.core.persistence.UserRepository;
 import lombok.Builder;
 import lombok.Value;
 

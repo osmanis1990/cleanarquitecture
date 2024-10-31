@@ -1,6 +1,6 @@
 package com.demo.cleanarquitecture.configuration;
 
-import com.demo.cleanarquitecture.core.repository.UserRepository;
+import com.demo.cleanarquitecture.core.persistence.UserRepository;
 import com.demo.cleanarquitecture.core.usecase.CreateUser;
 import com.demo.cleanarquitecture.core.usecase.GetUserById;
 import org.springframework.context.annotation.Bean;

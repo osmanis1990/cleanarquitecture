@@ -1,6 +1,6 @@
-package com.demo.cleanarquitecture.core.repository;
+package com.demo.cleanarquitecture.core.persistence;
 
-import com.demo.cleanarquitecture.core.model.User;
+import com.demo.cleanarquitecture.core.domain.User;
 
 import java.util.List;
 import java.util.UUID;
