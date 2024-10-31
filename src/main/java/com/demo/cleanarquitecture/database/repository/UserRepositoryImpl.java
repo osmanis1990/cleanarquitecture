@@ -4,9 +4,11 @@ import com.demo.cleanarquitecture.core.model.User;
 import com.demo.cleanarquitecture.core.repository.UserRepository;
 import com.demo.cleanarquitecture.database.mapper.UserMapper;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.PersistenceException;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Transactional
@@ -29,16 +31,19 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        return List.of();
+        return userMapper.toDomain(jpaUserRepository.findAll());
     }
 
     @Override
     public User save(User user) {
-        return null;
+        return Optional.ofNullable(userMapper.toEntity(user))
+                .map(jpaUserRepository::save)
+                .map(userMapper::toDomain)
+                .orElseThrow(() -> new PersistenceException(("User on save user")));
     }
 
     @Override
-    public void delete(String id) {
-
+    public void delete(UUID id) {
+        jpaUserRepository.deleteById(id);
     }
 }

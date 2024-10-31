@@ -11,6 +11,8 @@ import java.util.List;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
 public interface UserMapper {
 
+    UserEntity toEntity(User user);
+
     User toDomain(UserEntity entity);
 
     List<User> toDomain(List<UserEntity> userEntities);

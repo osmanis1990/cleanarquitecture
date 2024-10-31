@@ -13,6 +13,6 @@ public interface UserRepository {
 
     User save(User user);
 
-    void delete(String id);
+    void delete(UUID id);
 
 }
